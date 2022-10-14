@@ -1,0 +1,21 @@
+Serialization Program
+
+This program serializes an object to a file and then deserializes (reassembles it).
+
+Before accessing the example, some vital things should be understood first:
+
+====(1) WHAT IS SERIALIZATION?====
+	- An object can be represented as a a sequence of bytes. These bytes can include the object's data, such as its type, and types of data stored in that object.
+	- This in turn allows the object to be easily saved to storage or streamed across a communication link.
+	
+====(2) WHAT IS DESERIALIZATION?====
+	- As the name suggests, deserialization rebuilds the object after reading the stream of bytes from the file.
+
+====(3) WHY IS SERIALIZATION AWESOME/USEFUL?====
+	- Serialization is JVM independent. That means an object can be serialized on one platform and deserialized on a completely different one.
+
+====(4) TERMINOLOGY FROM PROGRAM====
+	-Transient: Fields that are preceded by "transient" will not be considered during serialization (Notice the SSN after deserializing -- it's 0).
+	-.Ser extension: The standard convention in Java is to give the file a�".ser"�extension when serializing.
+	- java.io.Serializable interface: Must be implement in order to serialize an object.
+	
